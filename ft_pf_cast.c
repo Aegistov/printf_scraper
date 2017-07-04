@@ -45,6 +45,7 @@ intmax_t	ft_pf_ucast(t_mods *mod, va_list insertion)
 intmax_t	ft_pf_cast(t_mods *mod, va_list insertion)
 {
 	intmax_t	holder;
+	printf("\nva_arg: %d\n", va_arg(insertion, int));
 	holder = va_arg(insertion, intmax_t);
 	if (mod->length == hh)
 	{
