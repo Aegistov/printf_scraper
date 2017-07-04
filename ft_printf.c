@@ -28,35 +28,35 @@ int		ft_printf(const char *restrict format, ...)
 	// printf("Reading initiated...\n");
 	while (format[index] != '\0')
 	{
-		if (format[index] == '%')
-		{
-			printf("%c\n", format[index]);
-			// if (format[index + 1] != '\0')
-			// {
-			// 	// printf("Activated\n");
-			// 	// index++;
-			// 	// len += ft_strlen(format);
-			// 	// index++;
-			// 	len += ft_printf_parse(format, arguments, &index);
-			// 	index++;
-			// }
-			// else
-			// 	return (0);
-			index++;
-			// printf("len after parse: %d\n", len);
-		}
-		else
-		{
-			ft_putchar_fd(format[index], 1);
-			printf("%c", format[index]);
-			// printf("Char: %c\tLen: %d\n", format[index], len);
-			len++;
-			// tmp = ft_strchjoin(str, format[index]);
-			// free (str);
-			// str = tmp;
-			// printf("str: %s\n", str);
-			index++;
-		}
+		printf("%c", format[index]);
+		// if (format[index] == '%')
+		// {
+		// 	printf("%c\n", format[index]);
+		// 	if (format[index + 1] != '\0')
+		// 	{
+		// 		// printf("Activated\n");
+		// 		// index++;
+		// 		// len += ft_strlen(format);
+		// 		// index++;
+		// 		len += ft_printf_parse(format, arguments, &index);
+		// 		index++;
+		// 	}
+		// 	else
+		// 		return (0);
+		// 	// printf("len after parse: %d\n", len);
+		// }
+		// else
+		// {
+		// 	ft_putchar_fd(format[index], 1);
+		// 	printf("%c", format[index]);
+		// 	// printf("Char: %c\tLen: %d\n", format[index], len);
+		// 	len++;
+		// 	// tmp = ft_strchjoin(str, format[index]);
+		// 	// free (str);
+		// 	// str = tmp;
+		// 	// printf("str: %s\n", str);
+		// 	index++;
+		// }
 	}
 	// printf("Reading complete.\n");
 	// ft_putchar_fd(*format, 1);
