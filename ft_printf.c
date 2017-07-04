@@ -46,7 +46,8 @@ int		ft_printf(const char *restrict format, ...)
 		else
 		{
 			ft_putchar_fd(format[index], 1);
-			printf("Char: %c\tLen: %d\n", format[index], len);
+			printf("%c\n", format[index]);
+			// printf("Char: %c\tLen: %d\n", format[index], len);
 			len++;
 			// tmp = ft_strchjoin(str, format[index]);
 			// free (str);
