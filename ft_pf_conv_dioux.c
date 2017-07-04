@@ -30,11 +30,23 @@ int		ft_printf_di(va_list insertion, t_mods *mod)
 	nbr.len = ft_pf_num_precision_check(mod, &nbr);
 	ft_pf_num_width_pad(mod, &nbr);
 	if (mod->arg == 'd')
-		printf("\n\n\n\n(%c) Case\tArgument: %d\n\n\n\n", mod->arg, nbr.arg.mint);
+	{
+		printf("\n\n\n\n(%c) Case\tArgument: %d\n", mod->arg, nbr.arg.mint);
+		printf("mod->left_align: %d, mod->plus: %d, mod->space: %d, mod->zero: %d, mod->p_active: %d, 
+			mod_width: %d, mod_precision: %d, mod->hash: %d, mod->length: %d\n\n\n\n", mod->left_align, mod->plus, mod->space, mod->zero, mod->p_active, mod->width, mod->mod_precision, mod->hash, mod->length);
+	}
 	else if (mod->arg == 'D')
-		printf("\n\n\n\n(%c) Case\tArgument: %D\n\n\n\n", mod->arg, nbr.arg.mint);
+	{
+		printf("\n\n\n\n(%c) Case\tArgument: %D\n", mod->arg, nbr.arg.mint);
+		printf("mod->left_align: %d, mod->plus: %d, mod->space: %d, mod->zero: %d, mod->p_active: %d, 
+			mod_width: %d, mod_precision: %d, mod->hash: %d, mod->length: %d\n\n\n\n", mod->left_align, mod->plus, mod->space, mod->zero, mod->p_active, mod->width, mod->mod_precision, mod->hash, mod->length);
+	}
 	else if (mod->arg == 'i')
-		printf("\n\n\n\n(%c) Case\tArgument: %i\n\n\n\n", mod->arg, nbr.arg.mint);
+	{
+		printf("\n\n\n\n(%c) Case\tArgument: %i\n", mod->arg, nbr.arg.mint);
+		printf("mod->left_align: %d, mod->plus: %d, mod->space: %d, mod->zero: %d, mod->p_active: %d, 
+			mod_width: %d, mod_precision: %d, mod->hash: %d, mod->length: %d\n\n\n\n", mod->left_align, mod->plus, mod->space, mod->zero, mod->p_active, mod->width, mod->mod_precision, mod->hash, mod->length);
+	}
 	count = ft_pf_num_print_order(mod, &nbr);
 	return (ft_pf_return(mod, &nbr, count));
 }
