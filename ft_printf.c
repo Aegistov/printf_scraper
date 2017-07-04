@@ -29,6 +29,7 @@ int		ft_printf(const char *restrict format, ...)
 	while (format[index] != '\0')
 	{
 		printf("%c", format[index]);
+		index++;
 		// if (format[index] == '%')
 		// {
 		// 	printf("%c\n", format[index]);
