@@ -19,6 +19,7 @@ int		ft_printf_C(va_list insertion, t_mods *mod)
 
 	width = mod->width;
 	ft_pf_str_init(&chr);
+	printf("\nva_arg: %d\n", va_arg(insertion, wchar_t));
 	chr.arg.wc = va_arg(insertion, wchar_t);
 	chr.len = ft_pf_putwchar(chr.arg.wc);
 	if (width - chr.len > 0)
