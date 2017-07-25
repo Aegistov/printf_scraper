@@ -19,7 +19,7 @@ int		ft_printf_C(va_list insertion, t_mods *mod)
 
 	width = mod->width;
 	ft_pf_str_init(&chr);
-	printf("\nva_arg: %d\n", va_arg(insertion, wchar_t));
+	printf("\nva_arg: %C\n", va_arg(insertion, wchar_t));
 	chr.arg.wc = va_arg(insertion, wchar_t);
 	chr.len = ft_pf_putwchar(chr.arg.wc);
 	if (width - chr.len > 0)
@@ -43,6 +43,7 @@ int 	ft_printf_S(va_list insertion, t_mods *mod)
 	width = mod->width;
 	ft_pf_str_init(&str);
 	// printf("Initialized\n");
+	printf("\nva_arg: %S\n", va_arg(insertion, wchar_t *));
 	str.arg.wstr = va_arg(insertion, wchar_t *);
 	// printf("Loaded\n");
 	str.len = ft_pf_wstr_len(str.arg.wstr);
